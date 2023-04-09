@@ -25,7 +25,7 @@ const docId = {"_id": new ObjectId(req.params.docId)
 const updatedSong = {$set: req.body}
 const returnOption = { returnNewDocument: true};
 const query = await coll.findOneAndUpdate(docId, updatedSong)   
-    res.status(200).send("song updated")
+    res.status(202).send("song updated")
 }
 
 //DELETE 
@@ -33,5 +33,5 @@ const query = await coll.findOneAndUpdate(docId, updatedSong)
 export async function deleteSong( req, res){
     const docId = {"_id": new ObjectId(req.params.docId)}
     await coll.deleteOne(docId)
-    res.status(200).send("song deleted")
+    res.status(202).send("song deleted")
 }
