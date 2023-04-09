@@ -1,5 +1,5 @@
-import express from express
-import cors from cors 
+import express from "express"
+import cors from "cors" 
 import { addSong, deleteSong, getSongs, updateSong } from "./src/songs.js";
 
 const PORT = 3000
