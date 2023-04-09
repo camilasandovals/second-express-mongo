@@ -27,3 +27,11 @@ const returnOption = { returnNewDocument: true};
 const query = await coll.findOneAndUpdate(docId, updatedSong)   
     res.status(200).send("song updated")
 }
+
+//DELETE 
+
+export async function deleteSong( req, res){
+    const docId = {"_id": new ObjectId(req.params.docId)}
+    await coll.deleteOne(docId)
+    res.status(200).send("song deleted")
+}
