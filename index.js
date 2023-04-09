@@ -10,6 +10,7 @@ app.use(express.json())
 
 //
 app.post("/songs", addSong)
+app.get("/songs", getSongs)
 
 
 
