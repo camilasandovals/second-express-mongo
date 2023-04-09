@@ -12,7 +12,7 @@ app.use(express.json())
 app.post("/songs", addSong)
 app.get("/songs", getSongs)
 app.patch("/songs/:docId", updateSong)
-
+app.delete("/songs/:docId", deleteSong)
 
 
 //
