@@ -1,6 +1,6 @@
 import express from express
 import cors from cors 
-import { addSong, getSongs, updateSong } from "./src/music.js";
+import { addSong, getSongs, updateSong } from "./src/songs.js";
 
 const PORT = 3000
 
@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json())
 
 //
-
+app.post("/songs", addSong)
 
 
 
