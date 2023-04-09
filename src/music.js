@@ -16,3 +16,11 @@ export async function getSongs ( req, res) {
     const allSongs = await coll.find({}).toArray()
     res.status(200).send(allSongs)
 }
+
+// UPDATE 
+
+export async function updateSong ( req, res) {
+
+    
+    res.status(200).send("song updated")
+}
