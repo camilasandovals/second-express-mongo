@@ -1,6 +1,6 @@
 import express from express
 import cors from cors 
-import { addSong, getSongs, updateSong } from "./src/songs.js";
+import { addSong, deleteSong, getSongs, updateSong } from "./src/songs.js";
 
 const PORT = 3000
 
@@ -11,6 +11,7 @@ app.use(express.json())
 //
 app.post("/songs", addSong)
 app.get("/songs", getSongs)
+app.patch("/songs/:docId", updateSong)
 
 
 
